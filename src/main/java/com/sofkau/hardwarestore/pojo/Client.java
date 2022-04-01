@@ -3,7 +3,7 @@ package com.sofkau.hardwarestore.pojo;
 public class Client {
     private String citizenshipCard;
     private String fullName;
-    private String PhoneNumber;
+    private String phoneNumber;
 
     public String getCitizenshipCard() {
         return citizenshipCard;
@@ -22,10 +22,10 @@ public class Client {
     }
 
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return phoneNumber;
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
+        this.phoneNumber = phoneNumber;
     }
 }

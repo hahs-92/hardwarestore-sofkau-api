@@ -4,7 +4,7 @@ package com.sofkau.hardwarestore.pojo;
 public class Seller {
     private String citizenshipCard;
     private String fullName;
-    private String PhoneNumber;
+    private String phoneNumber;
     private Integer age;
 
     public String getCitizenshipCard() {
@@ -24,11 +24,11 @@ public class Seller {
     }
 
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return phoneNumber;
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
+        this.phoneNumber = phoneNumber;
     }
 
     public Integer getAge() {
