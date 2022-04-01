@@ -13,24 +13,24 @@ public class ProductService {
     @Autowired
     private IProductRepository repository;
 
-    private Mono<Product> create(Product product) {
+    public Mono<Product> create(Product product) {
         return repository.save(product);
     }
 
-    private Flux<Product> getAll() {
+    public Flux<Product> getAll() {
         return repository.findAll();
     }
 
-    private Mono<Product> getById(String id) {
+    public Mono<Product> getById(String id) {
         return repository.findById(id)
                 .switchIfEmpty(Mono.empty());
     }
 
-    private Mono<Product> update(Product product) {
+    public Mono<Product> update(Product product) {
         return repository.save(product);
     }
 
-    private Mono<Void> delete(String id) {
+    public Mono<Void> delete(String id) {
         return repository.deleteById(id);
     }
 }

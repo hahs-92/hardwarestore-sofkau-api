@@ -12,20 +12,20 @@ public class InvoiceService {
     @Autowired
     private IInvoiceRepository repository;
 
-    private Mono<Invoice> create(Invoice invoice) {
+    public Mono<Invoice> create(Invoice invoice) {
         return repository.save(invoice);
     }
 
-    private Flux<Invoice> getAll() {
+    public Flux<Invoice> getAll() {
         return repository.findAll();
     }
 
-    private Mono<Invoice> getById(String id) {
+    public Mono<Invoice> getById(String id) {
         return repository.findById(id)
                 .switchIfEmpty(Mono.empty());
     }
 
-    private Mono<Void> delete(String id) {
+    public Mono<Void> delete(String id) {
         return repository.deleteById(id);
     }
 
