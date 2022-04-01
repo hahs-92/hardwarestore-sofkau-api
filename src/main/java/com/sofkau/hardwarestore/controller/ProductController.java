@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/products")
 @CrossOrigin(origins = "*")
@@ -21,6 +23,15 @@ public class ProductController {
     public ResponseEntity<Mono<Product>> create(@RequestBody Product product) {
         try {
             return new ResponseEntity<>(service.create(product), HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping("/createAll")
+    public ResponseEntity<Flux<Product>> createMany(@RequestBody List<Product> products) {
+        try {
+            return new ResponseEntity<>(service.createMany(products), HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -48,6 +59,15 @@ public class ProductController {
     public ResponseEntity<Mono<Product>> update(@RequestBody Product product) {
         try {
             return new ResponseEntity<>(service.update(product), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PutMapping("/updateAll")
+    public ResponseEntity<Flux<Product>> updateMany(@RequestBody List<Product> products) {
+        try {
+            return new ResponseEntity<>(service.updateMany(products), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }

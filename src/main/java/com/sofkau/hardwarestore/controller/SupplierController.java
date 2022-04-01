@@ -1,6 +1,5 @@
 package com.sofkau.hardwarestore.controller;
 
-import com.sofkau.hardwarestore.model.Product;
 import com.sofkau.hardwarestore.model.Supplier;
 import com.sofkau.hardwarestore.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/suppliers")
 @CrossOrigin(origins = "*")
-public class SupplerController {
+public class SupplierController {
 
     @Autowired
     private SupplierService service;
@@ -30,7 +29,7 @@ public class SupplerController {
     @GetMapping
     public ResponseEntity<Flux<Supplier>> getAll() {
         try {
-            return new ResponseEntity<>(service.getAll(), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.getAll(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -39,7 +38,7 @@ public class SupplerController {
     @GetMapping("/{id}")
     public ResponseEntity<Mono<Supplier>> getById(@PathVariable String id) {
         try {
-            return new ResponseEntity<>(service.getById(id), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.getById(id), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -57,7 +56,7 @@ public class SupplerController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Mono<Void>> DeleteById(@PathVariable String id) {
         try {
-            return new ResponseEntity<>(service.delete(id), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.delete(id), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }

@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+
 @Service
 public class ProductService {
     @Autowired
@@ -15,6 +17,10 @@ public class ProductService {
 
     public Mono<Product> create(Product product) {
         return repository.save(product);
+    }
+
+    public Flux<Product> createMany(List<Product> products) {
+        return repository.saveAll(products);
     }
 
     public Flux<Product> getAll() {
@@ -28,6 +34,10 @@ public class ProductService {
 
     public Mono<Product> update(Product product) {
         return repository.save(product);
+    }
+
+    public Flux<Product> updateMany(List<Product> products) {
+        return repository.saveAll(products);
     }
 
     public Mono<Void> delete(String id) {
