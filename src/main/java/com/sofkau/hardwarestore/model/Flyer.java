@@ -1,6 +1,6 @@
 package com.sofkau.hardwarestore.model;
 
-import com.sofkau.hardwarestore.pojo.Supplier;
+import com.sofkau.hardwarestore.pojo.SupplierPojo;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -13,7 +13,7 @@ public class Flyer {
     @Id
     private String id;
     private LocalDate date;
-    private Supplier supplier;
+    private SupplierPojo supplier;
     private List<Product> products;
 
     public String getId() {
@@ -32,11 +32,11 @@ public class Flyer {
         this.date = date;
     }
 
-    public Supplier getSupplier() {
+    public SupplierPojo getSupplier() {
         return supplier;
     }
 
-    public void setSupplier(Supplier supplier) {
+    public void setSupplier(SupplierPojo supplier) {
         this.supplier = supplier;
     }
 

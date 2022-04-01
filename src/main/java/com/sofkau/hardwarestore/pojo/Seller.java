@@ -5,7 +5,6 @@ public class Seller {
     private String citizenshipCard;
     private String fullName;
     private String phoneNumber;
-    private Integer age;
 
     public String getCitizenshipCard() {
         return citizenshipCard;
@@ -31,11 +30,4 @@ public class Seller {
         this.phoneNumber = phoneNumber;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 }

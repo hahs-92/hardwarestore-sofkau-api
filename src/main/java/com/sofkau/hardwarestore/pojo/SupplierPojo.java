@@ -1,6 +1,6 @@
 package com.sofkau.hardwarestore.pojo;
 
-public class Supplier {
+public class SupplierPojo {
     private String id;
     private String citizenshipCard;
     private String fullName;

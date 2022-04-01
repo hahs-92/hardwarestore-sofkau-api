@@ -28,7 +28,7 @@ public class InvoiceController {
     @GetMapping
     public ResponseEntity<Flux<Invoice>> getAll() {
         try {
-            return new ResponseEntity<>(service.getAll(), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.getAll(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -37,7 +37,7 @@ public class InvoiceController {
     @GetMapping("/{id}")
     public ResponseEntity<Mono<Invoice>> getById(@PathVariable String id) {
         try {
-            return new ResponseEntity<>(service.getById(id), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.getById(id), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -46,7 +46,7 @@ public class InvoiceController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Mono<Void>> DeleteById(@PathVariable String id) {
         try {
-            return new ResponseEntity<>(service.delete(id), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.delete(id), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
