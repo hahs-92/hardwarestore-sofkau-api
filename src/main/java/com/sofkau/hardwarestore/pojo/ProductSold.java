@@ -1,12 +1,14 @@
 package com.sofkau.hardwarestore.pojo;
 
 
+import com.sofkau.hardwarestore.model.Supplier;
+
 public class ProductSold {
     private String id;
     private String name;
     private Double price;
     private Integer quantity;
-    private SupplierPojo supplier;
+    private Supplier supplier;
 
     public String getId() {
         return id;
@@ -40,11 +42,11 @@ public class ProductSold {
         this.quantity = quantity;
     }
 
-    public SupplierPojo getSupplier() {
+    public Supplier getSupplier() {
         return supplier;
     }
 
-    public void setSupplier(SupplierPojo supplier) {
+    public void setSupplier(Supplier supplier) {
         this.supplier = supplier;
     }
 }

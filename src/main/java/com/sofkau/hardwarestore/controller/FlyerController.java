@@ -29,7 +29,7 @@ public class FlyerController {
     @GetMapping
     public ResponseEntity<Flux<Flyer>> getAll() {
         try {
-            return new ResponseEntity<>(service.getAll(), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.getAll(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -38,16 +38,16 @@ public class FlyerController {
     @GetMapping("/{id}")
     public ResponseEntity<Mono<Flyer>> getById(@PathVariable String id) {
         try {
-            return new ResponseEntity<>(service.getById(id), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.getById(id), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Mono<Void>> DeleteById(@PathVariable String id) {
+    public ResponseEntity<Mono<Void>> Delete(@PathVariable String id) {
         try {
-            return new ResponseEntity<>(service.delete(id), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.delete(id), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }

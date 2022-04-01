@@ -1,10 +1,10 @@
 package com.sofkau.hardwarestore.controller;
 
 import com.sofkau.hardwarestore.model.Invoice;
+import com.sofkau.hardwarestore.model.Supplier;
 import com.sofkau.hardwarestore.pojo.Client;
 import com.sofkau.hardwarestore.pojo.ProductSold;
 import com.sofkau.hardwarestore.pojo.Seller;
-import com.sofkau.hardwarestore.pojo.SupplierPojo;
 import com.sofkau.hardwarestore.service.InvoiceService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -46,7 +46,7 @@ public class InvoiceControllerTest {
         seller.setFullName("Carmen Lopez");
         seller.setPhoneNumber("322445676");
 
-        SupplierPojo supplier = new SupplierPojo();
+        Supplier supplier = new Supplier();
         supplier.setId("23546");
         supplier.setCitizenshipCard("1234623");
         supplier.setFullName("Luiz Rodrigues");
@@ -91,7 +91,7 @@ public class InvoiceControllerTest {
         seller.setFullName("Carmen Lopez");
         seller.setPhoneNumber("322445676");
 
-        SupplierPojo supplier = new SupplierPojo();
+        Supplier supplier = new Supplier();
         supplier.setId("23546");
         supplier.setCitizenshipCard("1234623");
         supplier.setFullName("Luiz Rodrigues");
@@ -136,7 +136,7 @@ public class InvoiceControllerTest {
         seller.setFullName("Carmen Lopez");
         seller.setPhoneNumber("322445676");
 
-        SupplierPojo supplier = new SupplierPojo();
+        Supplier supplier = new Supplier();
         supplier.setId("23546");
         supplier.setCitizenshipCard("1234623");
         supplier.setFullName("Luiz Rodrigues");
