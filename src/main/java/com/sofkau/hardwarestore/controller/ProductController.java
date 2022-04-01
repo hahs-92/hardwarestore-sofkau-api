@@ -40,7 +40,7 @@ public class ProductController {
     @GetMapping
     public ResponseEntity<Flux<Product>> getAll() {
         try {
-            return new ResponseEntity<>(service.getAll(), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.getAll(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -49,7 +49,7 @@ public class ProductController {
     @GetMapping("/{id}")
     public ResponseEntity<Mono<Product>> getById(@PathVariable String id) {
         try {
-            return new ResponseEntity<>(service.getById(id), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.getById(id), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -76,7 +76,7 @@ public class ProductController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Mono<Void>> DeleteById(@PathVariable String id) {
         try {
-            return new ResponseEntity<>(service.delete(id), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.delete(id), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
