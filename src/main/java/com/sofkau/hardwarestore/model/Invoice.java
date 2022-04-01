@@ -1,9 +1,9 @@
 package com.sofkau.hardwarestore.model;
 
 import com.sofkau.hardwarestore.pojo.Client;
+import com.sofkau.hardwarestore.pojo.ProductSold;
 import com.sofkau.hardwarestore.pojo.Seller;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
@@ -17,7 +17,7 @@ public class Invoice {
     private Client client;
     private Seller seller;
     private Double total;
-    private List<Product> products;
+    private List<ProductSold> products;
 
     public String getId() {
         return id;
@@ -59,11 +59,11 @@ public class Invoice {
         this.total = total;
     }
 
-    public List<Product> getProducts() {
+    public List<ProductSold> getProducts() {
         return products;
     }
 
-    public void setProducts(List<Product> products) {
+    public void setProducts(List<ProductSold> products) {
         this.products = products;
     }
 }
