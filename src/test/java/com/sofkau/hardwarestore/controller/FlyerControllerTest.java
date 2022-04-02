@@ -20,6 +20,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.List;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -54,7 +55,7 @@ public class FlyerControllerTest {
         Flyer flyer = new Flyer();
         flyer.setDate(LocalDate.of(2022, 12,9));
         flyer.setSupplier(supplier1);
-        flyer.setProducts(List.of(product));
+        flyer.setProducts(Arrays.asList(product));
 
         Mockito.when(service.create(flyer)).thenReturn(Mono.just(flyer));
 
@@ -87,9 +88,9 @@ public class FlyerControllerTest {
         Flyer flyer = new Flyer();
         flyer.setDate(LocalDate.of(2022, 12,9));
         flyer.setSupplier(supplier);
-        flyer.setProducts(List.of(product));
+        flyer.setProducts(Arrays.asList(product));
 
-        List<Flyer> flyerList = List.of(flyer);
+        List<Flyer> flyerList = Arrays.asList(flyer);
         Flux<Flyer> flyerFlux = Flux.fromIterable(flyerList);
 
         Mockito.when(service.getAll()).thenReturn(flyerFlux);
@@ -122,7 +123,7 @@ public class FlyerControllerTest {
         flyer.setId("xxx");
         flyer.setDate(LocalDate.of(2022, 12,9));
         flyer.setSupplier(supplier1);
-        flyer.setProducts(List.of(product));
+        flyer.setProducts(Arrays.asList(product));
 
         Mockito.when(service.getById("xxx")).thenReturn(Mono.just(flyer));
 

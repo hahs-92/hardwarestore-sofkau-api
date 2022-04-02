@@ -16,6 +16,7 @@ import org.springframework.web.reactive.function.BodyInserters;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Arrays;
 import java.util.List;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -65,7 +66,7 @@ public class SupplierControllerTest {
         supplier2.setPhoneNumber("311436465");
         supplier2.setEmail("maria@email.com");
 
-        List<Supplier> supplierList = List.of(supplier, supplier2);
+        List<Supplier> supplierList = Arrays.asList(supplier, supplier2);
         Flux<Supplier> supplierFlux = Flux.fromIterable(supplierList);
 
         Mockito.when(service.getAll()).thenReturn(supplierFlux);

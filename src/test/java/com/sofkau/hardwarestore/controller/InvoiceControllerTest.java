@@ -21,6 +21,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.List;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -65,7 +66,7 @@ public class InvoiceControllerTest {
         invoice.setDate(LocalDate.of(2021,12,12));
         invoice.setSeller(seller);
         invoice.setTotal(10.000);
-        invoice.setProducts(List.of(productSold));
+        invoice.setProducts(Arrays.asList(productSold));
 
         Mockito.when(service.create(invoice)).thenReturn(Mono.just(invoice));
 
@@ -110,9 +111,9 @@ public class InvoiceControllerTest {
         invoice.setDate(LocalDate.of(2021,12,12));
         invoice.setSeller(seller);
         invoice.setTotal(10.000);
-        invoice.setProducts(List.of(productSold));
+        invoice.setProducts(Arrays.asList(productSold));
 
-        List<Invoice> invoiceList = List.of(invoice);
+        List<Invoice> invoiceList = Arrays.asList(invoice);
         Flux<Invoice> invoiceFlux = Flux.fromIterable(invoiceList);
 
         Mockito.when(service.getAll()).thenReturn(invoiceFlux);
@@ -156,7 +157,7 @@ public class InvoiceControllerTest {
         invoice.setClient(client);
         invoice.setSeller(seller);
         invoice.setTotal(10.000);
-        invoice.setProducts(List.of(productSold));
+        invoice.setProducts(Arrays.asList(productSold));
 
         Mockito.when(service.getById("xxx")).thenReturn(Mono.just(invoice));
 

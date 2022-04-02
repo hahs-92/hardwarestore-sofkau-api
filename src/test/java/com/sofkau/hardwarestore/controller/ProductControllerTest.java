@@ -18,6 +18,7 @@ import org.springframework.web.reactive.function.BodyInserters;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Arrays;
 import java.util.List;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -87,7 +88,7 @@ public class ProductControllerTest {
         product1.setLimit(12);
         product1.setSupplier(supplier2);
 
-        List<Product> productList = List.of(product1, product);
+        List<Product> productList = Arrays.asList(product1, product);
         Flux<Product> productFlux = Flux.fromIterable(productList);
 
         Mockito.when(service.createMany(productList)).thenReturn(productFlux);
@@ -117,7 +118,7 @@ public class ProductControllerTest {
         product.setLimit(12);
         product.setSupplier(supplier);
 
-        List<Product> productList = List.of(product);
+        List<Product> productList = Arrays.asList(product);
         Flux<Product> productFlux = Flux.fromIterable(productList);
 
         Mockito.when(service.getAll()).thenReturn(productFlux);
@@ -229,7 +230,7 @@ public class ProductControllerTest {
         product1.setLimit(12);
         product1.setSupplier(supplier2);
 
-        List<Product> productList = List.of(product1, product);
+        List<Product> productList = Arrays.asList(product1, product);
         Flux<Product> productFlux = Flux.fromIterable(productList);
 
         Mockito.when(service.updateMany(productList)).thenReturn(productFlux);
