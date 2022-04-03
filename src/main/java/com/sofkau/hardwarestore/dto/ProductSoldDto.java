@@ -8,7 +8,7 @@ public class ProductSoldDto {
     private String name;
     private Double price;
     private Integer quantity;
-    private Supplier supplier;
+    private SupplierDto supplier;
 
     public String getId() {
         return id;
@@ -42,11 +42,11 @@ public class ProductSoldDto {
         this.quantity = quantity;
     }
 
-    public Supplier getSupplier() {
+    public SupplierDto getSupplier() {
         return supplier;
     }
 
-    public void setSupplier(Supplier supplier) {
+    public void setSupplier(SupplierDto supplier) {
         this.supplier = supplier;
     }
 }

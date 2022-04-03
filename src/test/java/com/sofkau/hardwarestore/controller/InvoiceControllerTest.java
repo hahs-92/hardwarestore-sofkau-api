@@ -1,5 +1,6 @@
 package com.sofkau.hardwarestore.controller;
 
+import com.sofkau.hardwarestore.dto.SupplierDto;
 import com.sofkau.hardwarestore.model.Invoice;
 import com.sofkau.hardwarestore.model.Supplier;
 import com.sofkau.hardwarestore.dto.ClientDto;
@@ -47,7 +48,7 @@ public class InvoiceControllerTest {
         seller.setFullName("Carmen Lopez");
         seller.setPhoneNumber("322445676");
 
-        Supplier supplier = new Supplier();
+        SupplierDto supplier = new SupplierDto();
         supplier.setId("23546");
         supplier.setCitizenshipCard("1234623");
         supplier.setFullName("Luiz Rodrigues");
@@ -92,7 +93,7 @@ public class InvoiceControllerTest {
         seller.setFullName("Carmen Lopez");
         seller.setPhoneNumber("322445676");
 
-        Supplier supplier = new Supplier();
+        SupplierDto supplier = new SupplierDto();
         supplier.setId("23546");
         supplier.setCitizenshipCard("1234623");
         supplier.setFullName("Luiz Rodrigues");
@@ -137,7 +138,7 @@ public class InvoiceControllerTest {
         seller.setFullName("Carmen Lopez");
         seller.setPhoneNumber("322445676");
 
-        Supplier supplier = new Supplier();
+        SupplierDto supplier = new SupplierDto();
         supplier.setId("23546");
         supplier.setCitizenshipCard("1234623");
         supplier.setFullName("Luiz Rodrigues");
