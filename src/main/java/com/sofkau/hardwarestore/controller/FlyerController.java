@@ -45,7 +45,7 @@ public class FlyerController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Mono<Void>> Delete(@PathVariable String id) {
+    public ResponseEntity<Mono<Void>> delete(@PathVariable String id) {
         try {
             return new ResponseEntity<>(service.delete(id), HttpStatus.OK);
         } catch (Exception e) {

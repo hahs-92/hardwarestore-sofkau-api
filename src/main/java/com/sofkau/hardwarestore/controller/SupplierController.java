@@ -54,7 +54,7 @@ public class SupplierController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Mono<Void>> DeleteById(@PathVariable String id) {
+    public ResponseEntity<Mono<Void>> delete(@PathVariable String id) {
         try {
             return new ResponseEntity<>(service.delete(id), HttpStatus.OK);
         } catch (Exception e) {
