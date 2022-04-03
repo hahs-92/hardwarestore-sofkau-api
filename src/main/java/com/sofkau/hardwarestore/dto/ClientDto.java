@@ -1,7 +1,6 @@
-package com.sofkau.hardwarestore.pojo;
+package com.sofkau.hardwarestore.dto;
 
-
-public class Seller {
+public class ClientDto {
     private String citizenshipCard;
     private String fullName;
     private String phoneNumber;
@@ -29,5 +28,4 @@ public class Seller {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
 }

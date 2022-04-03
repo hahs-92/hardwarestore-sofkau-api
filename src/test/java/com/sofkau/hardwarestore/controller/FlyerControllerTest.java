@@ -1,9 +1,11 @@
 package com.sofkau.hardwarestore.controller;
 
+import com.sofkau.hardwarestore.dto.ProductCreatedDto;
 import com.sofkau.hardwarestore.model.Flyer;
 import com.sofkau.hardwarestore.model.Invoice;
 import com.sofkau.hardwarestore.model.Product;
 import com.sofkau.hardwarestore.model.Supplier;
+import com.sofkau.hardwarestore.dto.SupplierDto;
 import com.sofkau.hardwarestore.service.FlyerService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -37,14 +39,14 @@ public class FlyerControllerTest {
     @Test
     @DisplayName("POST /flyers")
     void create() throws  Exception {
-        Supplier supplier1 = new Supplier();
+        SupplierDto supplier1 = new SupplierDto();
         supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
         supplier1.setPhoneNumber("321456879");
         supplier1.setEmail("luis@email.com");
 
-        Product product = new Product();
+        ProductCreatedDto product = new ProductCreatedDto();
         product.setId("sss");
         product.setName("Destornillador");
         product.setPrice(5.000);
@@ -70,14 +72,14 @@ public class FlyerControllerTest {
     @Test
     @DisplayName("GET /flyers")
     void getAll() throws  Exception {
-        Supplier supplier = new Supplier();
+        SupplierDto supplier = new SupplierDto();
         supplier.setId("23546");
         supplier.setCitizenshipCard("1234623");
         supplier.setFullName("Luiz Rodrigues");
         supplier.setPhoneNumber("321456879");
         supplier.setEmail("luis@email.com");
 
-        Product product = new Product();
+        ProductCreatedDto product = new ProductCreatedDto();
         product.setId("sss");
         product.setName("Destornillador");
         product.setPrice(5.000);
@@ -104,14 +106,14 @@ public class FlyerControllerTest {
     @Test
     @DisplayName("GET /flyers/{id}")
     void getById() throws  Exception {
-        Supplier supplier1 = new Supplier();
+        SupplierDto supplier1 = new SupplierDto();
         supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
         supplier1.setPhoneNumber("321456879");
         supplier1.setEmail("luis@email.com");
 
-        Product product = new Product();
+        ProductCreatedDto product = new ProductCreatedDto();
         product.setId("sss");
         product.setName("Destornillador");
         product.setPrice(5.000);

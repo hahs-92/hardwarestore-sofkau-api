@@ -1,6 +1,7 @@
 package com.sofkau.hardwarestore.controller;
 
 
+import com.sofkau.hardwarestore.dto.SupplierDto;
 import com.sofkau.hardwarestore.model.Product;
 import com.sofkau.hardwarestore.model.Supplier;
 import com.sofkau.hardwarestore.service.ProductService;
@@ -34,7 +35,7 @@ public class ProductControllerTest {
     @Test
     @DisplayName("POST /products")
     void create() throws  Exception {
-        Supplier supplier1 = new Supplier();
+        SupplierDto supplier1 = new SupplierDto();
         supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
@@ -60,7 +61,7 @@ public class ProductControllerTest {
     @Test
     @DisplayName("POST /products/createAll")
     void createMany() throws  Exception {
-        Supplier supplier1 = new Supplier();
+        SupplierDto supplier1 = new SupplierDto();
         supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
@@ -74,7 +75,7 @@ public class ProductControllerTest {
         product.setLimit(12);
         product.setSupplier(supplier1);
 
-        Supplier supplier2 = new Supplier();
+        SupplierDto supplier2 = new SupplierDto();
         supplier2.setId("23546");
         supplier2.setCitizenshipCard("1234623");
         supplier2.setFullName("Maria Rodrigues");
@@ -103,7 +104,7 @@ public class ProductControllerTest {
     @Test
     @DisplayName("GET /products")
     void getAll() throws  Exception {
-        Supplier supplier = new Supplier();
+        SupplierDto supplier = new SupplierDto();
         supplier.setId("23546");
         supplier.setCitizenshipCard("1234623");
         supplier.setFullName("Luiz Rodrigues");
@@ -132,7 +133,7 @@ public class ProductControllerTest {
     @Test
     @DisplayName("GET /products/{id}")
     void getById() throws  Exception {
-        Supplier supplier1 = new Supplier();
+        SupplierDto supplier1 = new SupplierDto();
         supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
@@ -161,7 +162,7 @@ public class ProductControllerTest {
     @Test
     @DisplayName("PUT /products")
     void update() throws  Exception {
-        Supplier supplier1 = new Supplier();
+        SupplierDto supplier1 = new SupplierDto();
         supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
@@ -175,7 +176,7 @@ public class ProductControllerTest {
         product.setLimit(12);
         product.setSupplier(supplier1);
 
-        Supplier supplier2 = new Supplier();
+        SupplierDto supplier2 = new SupplierDto();
         supplier2.setId("23546");
         supplier2.setCitizenshipCard("1234623");
         supplier2.setFullName("Maria Rodrigues");
@@ -202,7 +203,7 @@ public class ProductControllerTest {
     @Test
     @DisplayName("PUT /products/updateAll")
     void updateMany() throws  Exception {
-        Supplier supplier1 = new Supplier();
+        SupplierDto supplier1 = new SupplierDto();
         supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
@@ -216,7 +217,7 @@ public class ProductControllerTest {
         product.setLimit(12);
         product.setSupplier(supplier1);
 
-        Supplier supplier2 = new Supplier();
+        SupplierDto supplier2 = new SupplierDto();
         supplier2.setId("23546");
         supplier2.setCitizenshipCard("1234623");
         supplier2.setFullName("Maria Rodrigues");

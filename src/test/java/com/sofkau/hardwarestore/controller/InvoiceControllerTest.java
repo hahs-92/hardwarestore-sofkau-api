@@ -2,9 +2,9 @@ package com.sofkau.hardwarestore.controller;
 
 import com.sofkau.hardwarestore.model.Invoice;
 import com.sofkau.hardwarestore.model.Supplier;
-import com.sofkau.hardwarestore.pojo.Client;
-import com.sofkau.hardwarestore.pojo.ProductSold;
-import com.sofkau.hardwarestore.pojo.Seller;
+import com.sofkau.hardwarestore.dto.ClientDto;
+import com.sofkau.hardwarestore.dto.ProductSoldDto;
+import com.sofkau.hardwarestore.dto.SellerDto;
 import com.sofkau.hardwarestore.service.InvoiceService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -37,12 +37,12 @@ public class InvoiceControllerTest {
     @Test
     @DisplayName("POST /invoices")
     void create() throws  Exception {
-        Client client = new Client();
+        ClientDto client = new ClientDto();
         client.setCitizenshipCard("112345676");
         client.setFullName("Power Lol");
         client.setPhoneNumber("6666647");
 
-        Seller seller = new Seller();
+        SellerDto seller = new SellerDto();
         seller.setCitizenshipCard("110113758");
         seller.setFullName("Carmen Lopez");
         seller.setPhoneNumber("322445676");
@@ -54,7 +54,7 @@ public class InvoiceControllerTest {
         supplier.setPhoneNumber("321456879");
         supplier.setEmail("luis@email.com");
 
-        ProductSold productSold = new ProductSold();
+        ProductSoldDto productSold = new ProductSoldDto();
         productSold.setId("123566576");
         productSold.setName("Destornillador");
         productSold.setPrice(5.000);
@@ -82,12 +82,12 @@ public class InvoiceControllerTest {
     @DisplayName("GET /invoices")
     void getAll() throws  Exception {
 
-        Client client = new Client();
+        ClientDto client = new ClientDto();
         client.setCitizenshipCard("112345676");
         client.setFullName("Power Lol");
         client.setPhoneNumber("6666647");
 
-        Seller seller = new Seller();
+        SellerDto seller = new SellerDto();
         seller.setCitizenshipCard("110113758");
         seller.setFullName("Carmen Lopez");
         seller.setPhoneNumber("322445676");
@@ -99,7 +99,7 @@ public class InvoiceControllerTest {
         supplier.setPhoneNumber("321456879");
         supplier.setEmail("luis@email.com");
 
-        ProductSold productSold = new ProductSold();
+        ProductSoldDto productSold = new ProductSoldDto();
         productSold.setId("123566576");
         productSold.setName("Destornillador");
         productSold.setPrice(5.000);
@@ -127,12 +127,12 @@ public class InvoiceControllerTest {
     @Test
     @DisplayName("GET /invoices/{id}")
     void getById() throws  Exception {
-        Client client = new Client();
+        ClientDto client = new ClientDto();
         client.setCitizenshipCard("112345676");
         client.setFullName("Power Lol");
         client.setPhoneNumber("6666647");
 
-        Seller seller = new Seller();
+        SellerDto seller = new SellerDto();
         seller.setCitizenshipCard("110113758");
         seller.setFullName("Carmen Lopez");
         seller.setPhoneNumber("322445676");
@@ -144,7 +144,7 @@ public class InvoiceControllerTest {
         supplier.setPhoneNumber("321456879");
         supplier.setEmail("luis@email.com");
 
-        ProductSold productSold = new ProductSold();
+        ProductSoldDto productSold = new ProductSoldDto();
         productSold.setId("123566576");
         productSold.setName("Destornillador");
         productSold.setPrice(5.000);

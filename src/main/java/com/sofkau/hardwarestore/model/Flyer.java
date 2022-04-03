@@ -1,5 +1,7 @@
 package com.sofkau.hardwarestore.model;
 
+import com.sofkau.hardwarestore.dto.ProductCreatedDto;
+import com.sofkau.hardwarestore.dto.SupplierDto;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -12,8 +14,8 @@ public class Flyer {
     @Id
     private String id;
     private LocalDate date;
-    private Supplier supplier;
-    private List<Product> products;
+    private SupplierDto supplier;
+    private List<ProductCreatedDto> products;
 
     public String getId() {
         return id;
@@ -31,19 +33,19 @@ public class Flyer {
         this.date = date;
     }
 
-    public Supplier getSupplier() {
+    public SupplierDto getSupplier() {
         return supplier;
     }
 
-    public void setSupplier(Supplier supplier) {
+    public void setSupplier(SupplierDto supplier) {
         this.supplier = supplier;
     }
 
-    public List<Product> getProducts() {
+    public List<ProductCreatedDto> getProducts() {
         return products;
     }
 
-    public void setProducts(List<Product> products) {
+    public void setProducts(List<ProductCreatedDto> products) {
         this.products = products;
     }
 }

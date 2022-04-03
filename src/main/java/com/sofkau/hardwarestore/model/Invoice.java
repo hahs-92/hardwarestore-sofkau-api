@@ -1,8 +1,8 @@
 package com.sofkau.hardwarestore.model;
 
-import com.sofkau.hardwarestore.pojo.Client;
-import com.sofkau.hardwarestore.pojo.ProductSold;
-import com.sofkau.hardwarestore.pojo.Seller;
+import com.sofkau.hardwarestore.dto.ClientDto;
+import com.sofkau.hardwarestore.dto.ProductSoldDto;
+import com.sofkau.hardwarestore.dto.SellerDto;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -14,10 +14,10 @@ public class Invoice {
     @Id
     private String id;
     private LocalDate date;
-    private Client client;
-    private Seller seller;
+    private ClientDto client;
+    private SellerDto seller;
     private Double total;
-    private List<ProductSold> products;
+    private List<ProductSoldDto> products;
 
     public String getId() {
         return id;
@@ -35,19 +35,19 @@ public class Invoice {
         this.date = date;
     }
 
-    public Client getClient() {
+    public ClientDto getClient() {
         return client;
     }
 
-    public void setClient(Client client) {
+    public void setClient(ClientDto client) {
         this.client = client;
     }
 
-    public Seller getSeller() {
+    public SellerDto getSeller() {
         return seller;
     }
 
-    public void setSeller(Seller seller) {
+    public void setSeller(SellerDto seller) {
         this.seller = seller;
     }
 
@@ -59,11 +59,11 @@ public class Invoice {
         this.total = total;
     }
 
-    public List<ProductSold> getProducts() {
+    public List<ProductSoldDto> getProducts() {
         return products;
     }
 
-    public void setProducts(List<ProductSold> products) {
+    public void setProducts(List<ProductSoldDto> products) {
         this.products = products;
     }
 }

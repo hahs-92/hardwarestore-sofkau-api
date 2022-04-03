@@ -1,12 +1,6 @@
-package com.sofkau.hardwarestore.model;
+package com.sofkau.hardwarestore.dto;
 
-import com.sofkau.hardwarestore.dto.SupplierDto;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection = "products")
-public class Product {
-    @Id
+public class ProductCreatedDto {
     private String id;
     private String name;
     private Double price;

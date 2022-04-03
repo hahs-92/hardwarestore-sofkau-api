@@ -1,9 +1,9 @@
-package com.sofkau.hardwarestore.pojo;
+package com.sofkau.hardwarestore.dto;
 
 
 import com.sofkau.hardwarestore.model.Supplier;
 
-public class ProductSold {
+public class ProductSoldDto {
     private String id;
     private String name;
     private Double price;
