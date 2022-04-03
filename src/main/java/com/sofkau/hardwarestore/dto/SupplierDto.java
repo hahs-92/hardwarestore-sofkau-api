@@ -1,19 +1,11 @@
 package com.sofkau.hardwarestore.dto;
 
 public class SupplierDto {
-    private String id;
     private String citizenshipCard;
     private String fullName;
     private String  phoneNumber;
     private String email;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getCitizenshipCard() {
         return citizenshipCard;

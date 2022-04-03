@@ -35,7 +35,6 @@ public class ProductControllerTest {
     @DisplayName("POST /products")
     void create() throws  Exception {
         SupplierDto supplier1 = new SupplierDto();
-        supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
         supplier1.setPhoneNumber("321456879");
@@ -61,7 +60,6 @@ public class ProductControllerTest {
     @DisplayName("POST /products/createAll")
     void createMany() throws  Exception {
         SupplierDto supplier1 = new SupplierDto();
-        supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
         supplier1.setPhoneNumber("321456879");
@@ -75,7 +73,6 @@ public class ProductControllerTest {
         product.setSupplier(supplier1);
 
         SupplierDto supplier2 = new SupplierDto();
-        supplier2.setId("23546");
         supplier2.setCitizenshipCard("1234623");
         supplier2.setFullName("Maria Rodrigues");
         supplier2.setPhoneNumber("311456879");
@@ -104,7 +101,6 @@ public class ProductControllerTest {
     @DisplayName("GET /products")
     void getAll() throws  Exception {
         SupplierDto supplier = new SupplierDto();
-        supplier.setId("23546");
         supplier.setCitizenshipCard("1234623");
         supplier.setFullName("Luiz Rodrigues");
         supplier.setPhoneNumber("321456879");
@@ -133,7 +129,6 @@ public class ProductControllerTest {
     @DisplayName("GET /products/{id}")
     void getById() throws  Exception {
         SupplierDto supplier1 = new SupplierDto();
-        supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
         supplier1.setPhoneNumber("321456879");
@@ -162,7 +157,6 @@ public class ProductControllerTest {
     @DisplayName("PUT /products")
     void update() throws  Exception {
         SupplierDto supplier1 = new SupplierDto();
-        supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
         supplier1.setPhoneNumber("321456879");
@@ -176,7 +170,6 @@ public class ProductControllerTest {
         product.setSupplier(supplier1);
 
         SupplierDto supplier2 = new SupplierDto();
-        supplier2.setId("23546");
         supplier2.setCitizenshipCard("1234623");
         supplier2.setFullName("Maria Rodrigues");
         supplier2.setPhoneNumber("311456879");
@@ -203,7 +196,6 @@ public class ProductControllerTest {
     @DisplayName("PUT /products/updateAll")
     void updateMany() throws  Exception {
         SupplierDto supplier1 = new SupplierDto();
-        supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
         supplier1.setPhoneNumber("321456879");
@@ -217,7 +209,6 @@ public class ProductControllerTest {
         product.setSupplier(supplier1);
 
         SupplierDto supplier2 = new SupplierDto();
-        supplier2.setId("23546");
         supplier2.setCitizenshipCard("1234623");
         supplier2.setFullName("Maria Rodrigues");
         supplier2.setPhoneNumber("311456879");

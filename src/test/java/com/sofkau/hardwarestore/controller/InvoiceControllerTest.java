@@ -48,7 +48,6 @@ public class InvoiceControllerTest {
         seller.setPhoneNumber("322445676");
 
         SupplierDto supplier = new SupplierDto();
-        supplier.setId("23546");
         supplier.setCitizenshipCard("1234623");
         supplier.setFullName("Luiz Rodrigues");
         supplier.setPhoneNumber("321456879");
@@ -92,7 +91,6 @@ public class InvoiceControllerTest {
         seller.setPhoneNumber("322445676");
 
         SupplierDto supplier = new SupplierDto();
-        supplier.setId("23546");
         supplier.setCitizenshipCard("1234623");
         supplier.setFullName("Luiz Rodrigues");
         supplier.setPhoneNumber("321456879");
@@ -136,7 +134,6 @@ public class InvoiceControllerTest {
         seller.setPhoneNumber("322445676");
 
         SupplierDto supplier = new SupplierDto();
-        supplier.setId("23546");
         supplier.setCitizenshipCard("1234623");
         supplier.setFullName("Luiz Rodrigues");
         supplier.setPhoneNumber("321456879");

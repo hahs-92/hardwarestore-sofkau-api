@@ -38,7 +38,6 @@ public class FlyerControllerTest {
     @DisplayName("POST /flyers")
     void create() throws  Exception {
         SupplierDto supplier1 = new SupplierDto();
-        supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
         supplier1.setPhoneNumber("321456879");
@@ -70,7 +69,6 @@ public class FlyerControllerTest {
     @DisplayName("GET /flyers")
     void getAll() throws  Exception {
         SupplierDto supplier = new SupplierDto();
-        supplier.setId("23546");
         supplier.setCitizenshipCard("1234623");
         supplier.setFullName("Luiz Rodrigues");
         supplier.setPhoneNumber("321456879");
@@ -103,7 +101,6 @@ public class FlyerControllerTest {
     @DisplayName("GET /flyers/{id}")
     void getById() throws  Exception {
         SupplierDto supplier1 = new SupplierDto();
-        supplier1.setId("23546");
         supplier1.setCitizenshipCard("1234623");
         supplier1.setFullName("Luiz Rodrigues");
         supplier1.setPhoneNumber("321456879");
