@@ -3,7 +3,6 @@ package com.sofkau.hardwarestore.controller;
 
 import com.sofkau.hardwarestore.dto.SupplierDto;
 import com.sofkau.hardwarestore.model.Product;
-import com.sofkau.hardwarestore.model.Supplier;
 import com.sofkau.hardwarestore.service.ProductService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

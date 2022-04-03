@@ -1,14 +1,12 @@
 package com.sofkau.hardwarestore.dto;
 
 
-import com.sofkau.hardwarestore.model.Supplier;
 
 public class ProductSoldDto {
     private String id;
     private String name;
     private Double price;
     private Integer quantity;
-    private SupplierDto supplier;
 
     public String getId() {
         return id;
@@ -42,11 +40,4 @@ public class ProductSoldDto {
         this.quantity = quantity;
     }
 
-    public SupplierDto getSupplier() {
-        return supplier;
-    }
-
-    public void setSupplier(SupplierDto supplier) {
-        this.supplier = supplier;
-    }
 }

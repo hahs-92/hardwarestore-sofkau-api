@@ -6,7 +6,6 @@ public class ProductCreatedDto {
     private Double price;
     private Integer quantity;
     private Integer limit;
-    private SupplierDto supplier;
 
     public String getId() {
         return id;
@@ -48,11 +47,4 @@ public class ProductCreatedDto {
         this.limit = limit;
     }
 
-    public SupplierDto getSupplier() {
-        return supplier;
-    }
-
-    public void setSupplier(SupplierDto supplier) {
-        this.supplier = supplier;
-    }
 }

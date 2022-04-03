@@ -2,7 +2,6 @@ package com.sofkau.hardwarestore.controller;
 
 import com.sofkau.hardwarestore.dto.SupplierDto;
 import com.sofkau.hardwarestore.model.Invoice;
-import com.sofkau.hardwarestore.model.Supplier;
 import com.sofkau.hardwarestore.dto.ClientDto;
 import com.sofkau.hardwarestore.dto.ProductSoldDto;
 import com.sofkau.hardwarestore.dto.SellerDto;
@@ -60,7 +59,6 @@ public class InvoiceControllerTest {
         productSold.setName("Destornillador");
         productSold.setPrice(5.000);
         productSold.setQuantity(2);
-        productSold.setSupplier(supplier);
 
         Invoice invoice = new Invoice();
         invoice.setClient(client);
@@ -105,7 +103,6 @@ public class InvoiceControllerTest {
         productSold.setName("Destornillador");
         productSold.setPrice(5.000);
         productSold.setQuantity(2);
-        productSold.setSupplier(supplier);
 
         Invoice invoice = new Invoice();
         invoice.setClient(client);
@@ -150,7 +147,6 @@ public class InvoiceControllerTest {
         productSold.setName("Destornillador");
         productSold.setPrice(5.000);
         productSold.setQuantity(2);
-        productSold.setSupplier(supplier);
 
         Invoice invoice = new Invoice();
         invoice.setId("xxx");

@@ -3,8 +3,6 @@ package com.sofkau.hardwarestore.controller;
 import com.sofkau.hardwarestore.dto.ProductCreatedDto;
 import com.sofkau.hardwarestore.model.Flyer;
 import com.sofkau.hardwarestore.model.Invoice;
-import com.sofkau.hardwarestore.model.Product;
-import com.sofkau.hardwarestore.model.Supplier;
 import com.sofkau.hardwarestore.dto.SupplierDto;
 import com.sofkau.hardwarestore.service.FlyerService;
 import org.junit.jupiter.api.DisplayName;
@@ -52,7 +50,6 @@ public class FlyerControllerTest {
         product.setPrice(5.000);
         product.setQuantity(2);
         product.setLimit(12);
-        product.setSupplier(supplier1);
 
         Flyer flyer = new Flyer();
         flyer.setDate(LocalDate.of(2022, 12,9));
@@ -85,7 +82,6 @@ public class FlyerControllerTest {
         product.setPrice(5.000);
         product.setQuantity(2);
         product.setLimit(12);
-        product.setSupplier(supplier);
 
         Flyer flyer = new Flyer();
         flyer.setDate(LocalDate.of(2022, 12,9));
@@ -119,7 +115,6 @@ public class FlyerControllerTest {
         product.setPrice(5.000);
         product.setQuantity(2);
         product.setLimit(12);
-        product.setSupplier(supplier1);
 
         Flyer flyer = new Flyer();
         flyer.setId("xxx");
