@@ -8,14 +8,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDate;
 import java.util.List;
 
-@Document(collection = "suppliers")
+@Document(collection = "flyers")
 public class Flyer {
 
     @Id
     private String id;
     private LocalDate date;
-    private String nameSupplier;
-    private String citizenshipCardSupplier;
+    private SupplierDto supplier;
     private List<ProductCreatedDto> products;
 
     public String getId() {
@@ -34,20 +33,12 @@ public class Flyer {
         this.date = date;
     }
 
-    public String getNameSupplier() {
-        return nameSupplier;
+    public SupplierDto getSupplier() {
+        return supplier;
     }
 
-    public void setNameSupplier(String nameSupplier) {
-        this.nameSupplier = nameSupplier;
-    }
-
-    public String getCitizenshipCardSupplier() {
-        return citizenshipCardSupplier;
-    }
-
-    public void setCitizenshipCardSupplier(String citizenshipCardSupplier) {
-        this.citizenshipCardSupplier = citizenshipCardSupplier;
+    public void setSupplier(SupplierDto supplier) {
+        this.supplier = supplier;
     }
 
     public List<ProductCreatedDto> getProducts() {
