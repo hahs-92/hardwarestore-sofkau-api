@@ -52,7 +52,6 @@ public class FlyerControllerTest {
 
         Flyer flyer = new Flyer();
         flyer.setDate(LocalDate.of(2022, 12,9));
-        flyer.setSupplier(supplier1);
         flyer.setProducts(Arrays.asList(product));
 
         Mockito.when(service.create(flyer)).thenReturn(Mono.just(flyer));
@@ -83,7 +82,6 @@ public class FlyerControllerTest {
 
         Flyer flyer = new Flyer();
         flyer.setDate(LocalDate.of(2022, 12,9));
-        flyer.setSupplier(supplier);
         flyer.setProducts(Arrays.asList(product));
 
         List<Flyer> flyerList = Arrays.asList(flyer);
@@ -116,7 +114,6 @@ public class FlyerControllerTest {
         Flyer flyer = new Flyer();
         flyer.setId("xxx");
         flyer.setDate(LocalDate.of(2022, 12,9));
-        flyer.setSupplier(supplier1);
         flyer.setProducts(Arrays.asList(product));
 
         Mockito.when(service.getById("xxx")).thenReturn(Mono.just(flyer));

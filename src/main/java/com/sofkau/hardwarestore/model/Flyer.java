@@ -14,7 +14,8 @@ public class Flyer {
     @Id
     private String id;
     private LocalDate date;
-    private SupplierDto supplier;
+    private String nameSupplier;
+    private String citizenshipCardSupplier;
     private List<ProductCreatedDto> products;
 
     public String getId() {
@@ -33,12 +34,20 @@ public class Flyer {
         this.date = date;
     }
 
-    public SupplierDto getSupplier() {
-        return supplier;
+    public String getNameSupplier() {
+        return nameSupplier;
     }
 
-    public void setSupplier(SupplierDto supplier) {
-        this.supplier = supplier;
+    public void setNameSupplier(String nameSupplier) {
+        this.nameSupplier = nameSupplier;
+    }
+
+    public String getCitizenshipCardSupplier() {
+        return citizenshipCardSupplier;
+    }
+
+    public void setCitizenshipCardSupplier(String citizenshipCardSupplier) {
+        this.citizenshipCardSupplier = citizenshipCardSupplier;
     }
 
     public List<ProductCreatedDto> getProducts() {
